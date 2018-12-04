@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link href="https://fonts.googleapis.com/css?family=Bungee|Lato|Mali" rel="stylesheet">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Memotest</title>
+	</head>
+	<body>
+
+		<div id="gameBody">
+			<!--modal de bienvenida-->
+			<div id="modalIntro"> 
+				<h1 id="gameNameModal">Memotest</h1>
+				<div id="welcomeName">
+
+					<p> Hi! Let's Play! </p>
+					<p>But first...</p>
+					<p> what's your name ? </p>
+					<input type="text" id="playerName" placeholder="your name here!">
+				</div>
+				<div id="levelsBox">
+					<p>Choose your level.</p>
+					<div id="buttonsBox">
+						<button id="easy" class="buttonLevel">EASY</button>
+						<button id="medium" class="buttonLevel">MEDIUM</button>
+						<button id="hard" class="buttonLevel">HARD</button>
+					</div>
+					</div>
+				<div id="errorBox" class="hidden">
+					<div id="errorName"> 
+					<p class="requiredName">Upss... we need your name.</p> 
+				</div>
+			</div>
+		</div>
+
+		<!--board del juego -->
+			<div id="board" class="hidden">
+				<h1 id="gameNameBoard">Memotest</h1>
+				<p class="textGame">Hi <span id="player"></span></p>
+				<p class="textGame"> Find all the pairs in less than <span id="movesTotal"> </span> moves</p>
+				<h2 class="textGame">Level:</h2>
+				<p id="level" class="textGame"></p>
+				<!-- cartas -->
+				<div class="cardTotal"> 
+					<!--carta 1-->
+						<div class="cardDiv"> 
+							<img data-id="1" id="img-1" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 2-->
+						<div class="cardDiv"> 
+							<img data-id="2" id="img-2" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 3-->
+						<div class="cardDiv"> 
+							<img data-id="3" id="img-3" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 4-->
+						<div class="cardDiv"> 
+							<img data-id="4" id="img-4" src="img/nuevas/cardback.jpg"> 
+						</div>	
+					<!--carta 5-->
+						<div class="cardDiv"> 
+							<img data-id="5" id="img-5" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 6-->
+						<div class="cardDiv"> 
+							<img data-id="6" id="img-6" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 7-->
+						<div class="cardDiv"> 
+							<img data-id="7" id="img-7" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 8-->
+						<div class="cardDiv"> 
+							<img data-id="8" id="img-8" src="img/nuevas/cardback.jpg"> 
+						</div>	
+					<!--carta 9-->
+						<div class="cardDiv"> 
+							<img data-id="9" id="img-9" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 10-->
+						<div class="cardDiv"> 
+							<img data-id="10" id="img-10" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 11-->
+						<div class="cardDiv"> 
+							<img data-id="11" id="img-11" src="img/nuevas/cardback.jpg"> 
+						</div>
+					<!--carta 12-->
+						<div class="cardDiv"> 
+							<img data-id="12" id="img-12" src="img/nuevas/cardback.jpg"> 
+						</div>	
+					</div>
+
+				<div id="movesBox"><p class="textMoves">Moves: <span id="movesLeft">0</span></p></div>
+			</div>
+
+
+			<div id="modalWinner" class="hidden"> 
+<!-- modal finales -->
+				<p> You won with <span id="totalMoves">0 </span> moves.</p>
+				<p> Try again?</p>
+				<button class="again">Again</button>
+				<div id="ranking">
+					<div class="column jugador"> Player</div>
+					<div class="column nivel"> Level</div>
+					<div class="column movimientos">Moves</div>
+				</div>
+			</div>
+							
+				<div id="modalLoser" class="hidden"> 
+					<p>You lost!</p>
+					<p>Try again?</p>
+					<button class="again">Again</button>
+				</div>
+			</div>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

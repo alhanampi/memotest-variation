@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  text-decoration: none;
+  background: url("../img/nuevas/background.png");
+}
+body .hidden {
+  display: none !important;
+}
+
+#gameBody {
+  position: relative;
+}
+
+#modalIntro {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  height: 500px;
+  background: rgba(7, 3, 22, 0.7);
+  z-index: 1;
+  border: 8px solid #4e4747;
+  border-radius: 15px;
+  font-family: "Lato", sans-serif;
+  color: antiquewhite;
+  justify-content: center;
+}
+#modalIntro #gameNameModal {
+  text-align: center;
+  justify-content: center;
+  color: lightseagreen;
+  font-family: "Bungee", cursive;
+  font-size: 40px;
+}
+#modalIntro #welcomeName {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#modalIntro #welcomeName #playerName {
+  width: 250px;
+  height: 20px;
+  outline: none;
+  border-color: palevioletred;
+  box-shadow: none;
+  border-style: solid;
+}
+#modalIntro #welcomeName #playerName:focus {
+  outline: none;
+  border-color: purple;
+}
+#modalIntro #levelsBox {
+  display: flex;
+  flex-direction: column;
+}
+#modalIntro #levelsBox .buttonLevel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4e4747;
+  border-radius: 5px;
+  border: 2px solid #8b8888;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#modalIntro #levelsBox .buttonLevel:hover {
+  background-color: #5f5969;
+}
+#modalIntro #errorName {
+  width: 250px;
+  height: 50px;
+  background-color: #d8cdd8;
+}
+#modalIntro #errorName .requiredName {
+  color: #382d42;
+  font-size: 16px;
+  text-align: center;
+}
+
+#board {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 60%;
+  height: 60%;
+  border: 5px solid black;
+  border-radius: 15px;
+  font-family: "Lato", sans-serif;
+}
+#board #gameNameBoard {
+  text-align: center;
+  color: white;
+  font-family: "Bungee", cursive;
+  font-size: 48px;
+}
+#board .textGame {
+  text-align: center;
+}
+#board .textGame #movesTotal {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+#board #movesBox {
+  background-color: beige;
+  border: 5px solid #9fa5a5;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Mali", cursive;
+}
+#board #movesBox .textMoves {
+  text-align: center;
+}
+
+.cardTotal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.cardTotal .cardDiv {
+  display: flex;
+  margin: 1%;
+  height: 150px;
+}
+.cardTotal .cardDiv img {
+  height: 100%;
+  cursor: pointer;
+  border: #262929 3px solid;
+  border-radius: 3px;
+}
+.cardTotal .turnOn {
+  transform: rotateY(180deg);
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.cardTotal .foundCard {
+  filter: saturate(0);
+}
+
+#modalLoser {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  height: 500px;
+  background: rgba(7, 3, 22, 0.7);
+  z-index: 1;
+  border: 8px solid #4e4747;
+  border-radius: 15px;
+  font-family: "Lato", sans-serif;
+  color: antiquewhite;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 300px;
+}
+#modalLoser .again {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4e4747;
+  border-radius: 5px;
+  border: 2px solid #8b8888;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 150px;
+}
+
+#modalWinner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  height: 500px;
+  background: rgba(7, 3, 22, 0.7);
+  z-index: 1;
+  border: 8px solid #4e4747;
+  border-radius: 15px;
+  font-family: "Lato", sans-serif;
+  color: antiquewhite;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+}
+#modalWinner .again {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4e4747;
+  border-radius: 5px;
+  border: 2px solid #8b8888;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 2%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 150px;
+}
+#modalWinner #ranking {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  border-top: 2px solid black;
+  justify-content: space-around;
+}
+#modalWinner #ranking .jugador, #modalWinner #ranking .nivel {
+  border-right: 2px solid black;
+}
+#modalWinner #ranking .jugador, #modalWinner #ranking .nivel, #modalWinner #ranking .movimientos {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
